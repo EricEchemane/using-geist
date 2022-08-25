@@ -1,14 +1,12 @@
-import '../styles/globals.css';
 import 'inter-ui/inter.css';
 import type { AppProps } from 'next/app';
-import { GeistProvider, CssBaseline } from '@geist-ui/core';
+import { ThemeChangerProvider } from 'contexts/theme_changer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <GeistProvider>
-      <CssBaseline />
+    <ThemeChangerProvider>
       <Component {...pageProps} />
-    </GeistProvider>
+    </ThemeChangerProvider>
   );
 }
 
